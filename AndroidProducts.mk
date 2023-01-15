@@ -9,5 +9,5 @@ PRODUCT_MAKEFILES := \
 
 COMMON_LUNCH_CHOICES := \
     aosp_rova-user \
-    aops_rova-userdebug \
+    aosp_rova-userdebug \
     aosp_rova-eng
