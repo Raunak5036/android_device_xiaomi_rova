@@ -14,7 +14,6 @@ $(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Inherit some props from Cherish
 CHERISH_VANILLA := true
-CHERISH_BUILD_TYPE := OFFICIAL
 #TARGET_USES_MINI_GAPPS := true
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.cherish.maintainer= @maxx459
