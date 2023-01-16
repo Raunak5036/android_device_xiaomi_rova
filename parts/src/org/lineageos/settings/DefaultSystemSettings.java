@@ -75,13 +75,13 @@ public class DefaultSystemSettings {
         writeAnimationSettings();
     }
 
-    private void writeDisableNavkeysOption(final boolean enabled) {
-        final boolean virtualKeysEnabled = LineageSettings.System.getIntForUser(
+   private void writeDisableNavkeysOption(final boolean disabled) {
+        final boolean virtualKeysDisabled = LineageSettings.System.getIntForUser(
                 mContext.getContentResolver(), LineageSettings.System.FORCE_SHOW_NAVBAR, 0,
-                UserHandle.USER_CURRENT) != 0;
-        if (enabled != virtualKeysEnabled) {
+                UserHandle.USER_CURRENT) != 1;
+        if (disabled != virtualKeysDisabled) {
             LineageSettings.System.putIntForUser(mContext.getContentResolver(),
-                    LineageSettings.System.FORCE_SHOW_NAVBAR, enabled ? 1 : 0,
+                    LineageSettings.System.FORCE_SHOW_NAVBAR, disabled ? 0 : 1,
                     UserHandle.USER_CURRENT);
         }
     }
@@ -152,10 +152,10 @@ public class DefaultSystemSettings {
 
     private void writeAnimationSettings() {
         Settings.Global.putString(mContext.getContentResolver(),
-                Settings.Global.WINDOW_ANIMATION_SCALE, "0.7");
+                Settings.Global.WINDOW_ANIMATION_SCALE, "0.5");
         Settings.Global.putString(mContext.getContentResolver(),
-                Settings.Global.TRANSITION_ANIMATION_SCALE, "0.7");
+                Settings.Global.TRANSITION_ANIMATION_SCALE, "0.5");
         Settings.Global.putString(mContext.getContentResolver(),
-                Settings.Global.ANIMATOR_DURATION_SCALE, "0.7");
+                Settings.Global.ANIMATOR_DURATION_SCALE, "0.5");
     }
 }
