@@ -28,7 +28,6 @@ TARGET_VENDOR := Xiaomi
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-aosp
 
 PRODUCT_PACKAGES += \
     xiaomi_riva_overlay_lineage \
