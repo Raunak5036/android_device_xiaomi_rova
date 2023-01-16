@@ -12,6 +12,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+#Additions
+PALYRIM_MAINTAINER := @maxx459
+TARGET_SUPPORT_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Inherit from rova device
 $(call inherit-product, device/xiaomi/rova/device.mk)
 
