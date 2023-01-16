@@ -10,7 +10,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+
+# Inherit some props from Cherish
+CHERISH_VANILLA := true
+CHERISH_BUILD_TYPE := OFFICIAL
+#TARGET_USES_MINI_GAPPS := true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer= @maxx459
+
+# Inherit some common device props
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_CALL_RECORDING := true
 
 # Inherit from rova device
 $(call inherit-product, device/xiaomi/rova/device.mk)
