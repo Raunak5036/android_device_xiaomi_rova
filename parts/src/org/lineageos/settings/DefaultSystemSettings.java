@@ -76,12 +76,12 @@ public class DefaultSystemSettings {
     }
 
        private void writeDisableNavkeysOption(final boolean enabled) {
-        final boolean virtualKeysEnabled = LineageSettings.System.getIntForUser(
-                mContext.getContentResolver(), LineageSettings.System.FORCE_SHOW_NAVBAR, 0,
+        final boolean virtualKeysEnabled = Settings.System.getIntForUser(
+                mContext.getContentResolver(), Settings.System.FORCE_SHOW_NAVBAR, 0,
                 UserHandle.USER_CURRENT) != 0;
         if (enabled != virtualKeysEnabled) {
-            LineageSettings.System.putIntForUser(mContext.getContentResolver(),
-                    LineageSettings.System.FORCE_SHOW_NAVBAR, enabled ? 1 : 0,
+            Settings.System.putIntForUser(mContext.getContentResolver(),
+                    Settings.System.FORCE_SHOW_NAVBAR, enabled ? 1 : 0,
                     UserHandle.USER_CURRENT);
         }
     }
