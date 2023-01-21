@@ -15,6 +15,22 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from rova device
 $(call inherit-product, device/xiaomi/rova/device.mk)
 
+# GAPPS main flag
+WITH_GAPPS := false
+# Compiler will only build GMS playstore services, its dependencies, and Gboard app.
+TARGET_CORE_GAPPS := false
+# extra flag under TARGET_CORE_GAPPS. Extra packages for core build type (velvet and photos)
+TARGET_CORE_GAPPS_EXTRAS := false
+
+# Alpha internal properties
+TARGET_ENABLE_BLUR := false
+TARGET_INCLUDE_MATLOG := false
+TARGET_USE_GRAPHENE_CAMERA := true
+TARGET_USE_PIXEL_LAUNCHER := false
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+ALPHA_MAINTAINER := @maxx459
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rova
 PRODUCT_NAME := lineage_rova
