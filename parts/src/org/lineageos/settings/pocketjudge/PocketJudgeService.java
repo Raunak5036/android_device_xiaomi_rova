@@ -247,9 +247,9 @@ public class PocketJudgeService extends Service {
                     // Disable force wake screen with volume keys if the user
                     // doesn't want it
                     if (!mVolBtnMusicControlsEnabled && !mVolumeWakeScreenEnabled) {
-                        Settings.System.putIntForUser(mContext.getContentResolver(),
-                                Settings.System.VOLUME_WAKE_SCREEN, 0,
-                                UserHandle.USER_CURRENT);
+                        //Settings.System.putIntForUser(mContext.getContentResolver(),
+                               // Settings.System.VOLUME_WAKE_SCREEN, 0,
+                          //      UserHandle.USER_CURRENT);
                     }
                 });
             } else if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
@@ -265,29 +265,29 @@ public class PocketJudgeService extends Service {
                         return;
                     }
 
-                    mVolumeWakeScreenEnabled = Settings.System.getIntForUser(
-                            mContext.getContentResolver(),
-                            	Settings.System.VOLUME_WAKE_SCREEN, 0,
-                            UserHandle.USER_CURRENT) != 0;
+                   // mVolumeWakeScreenEnabled = Settings.System.getIntForUser(
+                     //       mContext.getContentResolver(),
+                            	//Settings.System.VOLUME_WAKE_SCREEN, 0,
+                       //     UserHandle.USER_CURRENT) != 0;
                     if (mVolumeWakeScreenEnabled) {
                         return;
-                    }
+                   }
 
                     // Force wake screen with volume keys if volume buttons should
                     // not seek media tracks
-                    	Settings.System.putIntForUser(mContext.getContentResolver(),
-                            	Settings.System.VOLUME_WAKE_SCREEN, 1,
-                            UserHandle.USER_CURRENT);
+                    //	Settings.System.putIntForUser(mContext.getContentResolver(),
+                            	//Settings.System.VOLUME_WAKE_SCREEN, 1,
+                           // UserHandle.USER_CURRENT);
                 });
-            } else if (intent.getAction().equals(Intent.ACTION_USER_PRESENT)) {
+             } else if (intent.getAction().equals(Intent.ACTION_USER_PRESENT)) {
                 if (DEBUG) Log.d(TAG, "Receiving screen intent: ACTION_USER_PRESENT");
                 mLastAction = EVENT_UNLOCK;
                 disableSensor();
-            }
+           }
         }
     };
 
-    public SensorEventListener mProximitySensorEventListener = new SensorEventListener() {
+   public SensorEventListener mProximitySensorEventListener = new SensorEventListener() {
         @Override
         public void onAccuracyChanged(Sensor sensor, int accuracy) { }
 
