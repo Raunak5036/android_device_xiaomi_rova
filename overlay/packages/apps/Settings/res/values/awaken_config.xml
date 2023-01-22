@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources>
+xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Minimum interval (in milliseconds) needed to trigger doze pulsing
          on "Pickup up" gesture.
          Default: 2.5 seconds (2.5 * 1000) -->
@@ -34,4 +35,6 @@
          after "Tilt" gesture is triggered.
          Default: 300 milliseconds -->
     <integer name="config_dozePulseTilt_WakelockTimeoutMs">150</integer>
+
+    <string name="awaken_maintainer">@maxx459</string>
 </resources>

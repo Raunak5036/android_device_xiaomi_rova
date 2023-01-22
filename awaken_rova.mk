@@ -10,14 +10,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 
 # Inherit from rova device
 $(call inherit-product, device/xiaomi/rova/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rova
-PRODUCT_NAME := aosp_rova
+PRODUCT_NAME := awaken_rova
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4A / 5A
@@ -27,14 +27,14 @@ TARGET_VENDOR := Xiaomi
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
 
-# Overlay
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
 
-PRODUCT_PACKAGES += \
-    xiaomi_riva_overlay_lineage \
-    xiaomi_rolex_overlay_lineage
+# GApps
+USE_GAPPS := false
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-aosp
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
     xiaomi_riva_overlay_lineage \
