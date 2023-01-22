@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_rova.mk
+    $(LOCAL_DIR)/awaken_rova.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_rova-user \
-    aosp_rova-userdebug \
-    aosp_rova-eng
+    awaken_rova-user \
+    awaken_rova-userdebug \
+    awaken_rova-eng
