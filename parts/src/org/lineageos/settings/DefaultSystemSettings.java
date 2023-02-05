@@ -55,10 +55,7 @@ public class DefaultSystemSettings {
     }
 
     public void onBootCompleted() {
-        if (isFirstRun("disable-nav-keys")) {
-            writeDisableNavkeysOption(true);
-        }
-
+    
         if (isFirstRun("enable-battery-light")) {
             writeBatteryLightOption(true);
         }
@@ -75,17 +72,7 @@ public class DefaultSystemSettings {
         writeAnimationSettings();
     }
 
-    private void writeDisableNavkeysOption(final boolean enabled) {
-        final boolean virtualKeysEnabled = Settings.System.getIntForUser(
-                mContext.getContentResolver(), Settings.System.FORCE_SHOW_NAVBAR, 0,
-                UserHandle.USER_CURRENT) != 0;
-        if (enabled != virtualKeysEnabled) {
-            	Settings.System.putIntForUser(mContext.getContentResolver(),
-                    	Settings.System.FORCE_SHOW_NAVBAR, enabled ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-        }
-    }
-
+   
     private void writeBatteryLightOption(final boolean enabled) {
         final boolean isBatteryLightEnabled = Settings.System.getIntForUser(
                 mContext.getContentResolver(), Settings.System.BATTERY_LIGHT_ENABLED, 0,
@@ -156,6 +143,6 @@ public class DefaultSystemSettings {
         Settings.Global.putString(mContext.getContentResolver(),
                 Settings.Global.TRANSITION_ANIMATION_SCALE, "0.5");
         Settings.Global.putString(mContext.getContentResolver(),
-                Settings.Global.ANIMATOR_DURATION_SCALE, "0.5");
+                Settings.Global.ANIMATOR_DURATION_SCALE, "1.0");
     }
 }
