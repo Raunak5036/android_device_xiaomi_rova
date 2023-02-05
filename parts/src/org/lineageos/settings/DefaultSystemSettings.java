@@ -55,60 +55,11 @@ public class DefaultSystemSettings {
     }
 
     public void onBootCompleted() {
-    
-        if (isFirstRun("enable-battery-light")) {
-            writeBatteryLightOption(true);
-        }
-
-        if (isFirstRun("enable-dt2w")) {
-            writeDt2wOption(true);
-        }
-
-        if (isFirstRun("enable-auto-brightness")) {
-            writeAutoBrightnessOption(true);
-        }
 
         tweakActivityManagerSettings();
         writeAnimationSettings();
     }
 
-   
-    private void writeBatteryLightOption(final boolean enabled) {
-        final boolean isBatteryLightEnabled = Settings.System.getIntForUser(
-                mContext.getContentResolver(), Settings.System.BATTERY_LIGHT_ENABLED, 0,
-                UserHandle.USER_CURRENT) != 0;
-        if (enabled != isBatteryLightEnabled) {
-            	Settings.System.putIntForUser(mContext.getContentResolver(),
-                    	Settings.System.BATTERY_LIGHT_ENABLED, enabled ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-        }
-    }
-
-    private void writeDt2wOption(final boolean enabled) {
-        final boolean isDt2wEnabled = Settings.Secure.getIntForUser(
-                mContext.getContentResolver(), Settings.Secure.DOUBLE_TAP_TO_WAKE, 0,
-                UserHandle.USER_CURRENT) != 0;
-        if (enabled != isDt2wEnabled) {
-            Settings.Secure.putIntForUser(mContext.getContentResolver(),
-                    Settings.Secure.DOUBLE_TAP_TO_WAKE, enabled ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-        }
-    }
-
-    private void writeAutoBrightnessOption(final boolean enabled) {
-        final int manualValue = Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
-        final boolean isAutoBrightnessEnabled = Settings.System.getIntForUser(
-                mContext.getContentResolver(),
-                Settings.System.SCREEN_BRIGHTNESS_MODE, manualValue,
-                UserHandle.USER_CURRENT) != manualValue;
-        if (enabled != isAutoBrightnessEnabled) {
-            final int autoValue = Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
-            Settings.System.putIntForUser(mContext.getContentResolver(),
-                    Settings.System.SCREEN_BRIGHTNESS_MODE,
-                    enabled ? autoValue : manualValue,
-                    UserHandle.USER_CURRENT);
-        }
-    }
 
     private void runCmd(String cmd) {
         try {
