@@ -24,8 +24,7 @@ PRODUCT_MODEL := Redmi 4A / 5A
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 720
+
 
 # Rice Stuff
 RICE_DEVICE := Rova
@@ -34,6 +33,11 @@ RICE_MAINTAINER := @maxx439
 SUSHI_BOOTANIMATION := 720
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
+# Graphene Camera (default: not defined - skipped by the compiler)
+TARGET_BUILD_GRAPHENEOS_CAMERA := true
+
+# disable/enable blur support, default is false
+TARGET_ENABLE_BLUR := false
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
