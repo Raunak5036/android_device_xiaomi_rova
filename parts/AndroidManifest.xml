@@ -150,29 +150,7 @@
             </intent-filter>
         </provider>
 
-        <service
-            android:name=".pocketjudge.PocketJudgeService"
-            android:exported="false">
-        </service>
-
-        <activity
-            android:name=".pocketjudge.PocketJudgeActivity"
-            android:exported="true"
-            android:label="@string/pocket_judge_title">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.display" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/pocket_judge_summary" />
-        </activity>
+   
 
         <receiver
             android:name=".PhoneStateReceiver"

@@ -53,7 +53,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         );
         new SmartCharging(context).onBootCompleted();
         new DefaultSystemSettings(context).onBootCompleted();
-        new PocketJudge(context).onBootCompleted();
+      
 
         // === DELAYED TASKS === //
 

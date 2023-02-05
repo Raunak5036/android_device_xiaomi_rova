@@ -76,8 +76,7 @@ public class PartsSearchIndexablesProvider extends SearchIndexablesProvider {
                     SmartChargingActivity.class.getName(), iconResId));
         sResMap.add(new SearchIndexableResource(rank, R.xml.soundcontrol_settings,
                     SoundControlSettingsActivity.class.getName(), iconResId));
-        sResMap.add(new SearchIndexableResource(rank, R.xml.pocketjudge_settings,
-                    PocketJudgeActivity.class.getName(), iconResId));
+       
     }
 
     @Override
