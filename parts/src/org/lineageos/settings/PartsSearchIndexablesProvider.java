@@ -55,7 +55,6 @@ import org.lineageos.settings.dirac.DiracActivity;
 import org.lineageos.settings.speaker.ClearSpeakerActivity;
 import org.lineageos.settings.smartcharging.SmartChargingActivity;
 import org.lineageos.settings.soundcontrol.SoundControlSettingsActivity;
-import org.lineageos.settings.pocketjudge.PocketJudgeActivity;
 import org.lineageos.settings.uibench.JitterTestActivity;
 
 import java.util.HashSet;
