@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bootleg_rova.mk
+    $(LOCAL_DIR)/blaze_rova.mk
 
 COMMON_LUNCH_CHOICES := \
-    bootleg_rova-user \
-    bootleg_rova-userdebug \
-    bootleg_rova-eng
+    blaze_rova-user \
+    blaze_rova-userdebug \
+    blaze_rova-eng
