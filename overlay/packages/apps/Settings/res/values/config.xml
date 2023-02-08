@@ -36,5 +36,8 @@
     <!-- Settings intelligence package name -->
     <string name="config_settingsintelligence_package_name" translatable="false">
         com.google.android.settings.intelligence
+       <!-- Flexo Maintainer -->
+    <string name="wings_maintainer_name" translatable="false">@maxx459</string>
+    <string name="wings_maintainer_group" translatable="false">https://t.me/projectflexosupport</string>    
     </string>
 </resources>
