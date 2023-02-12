@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_rova.mk
+    $(LOCAL_DIR)/droidx_rova.mk
 
 COMMON_LUNCH_CHOICES := \
-    blaze_rova-user \
-    blaze_rova-userdebug \
-    blaze_rova-eng
+    droidx_rova-user \
+    droidx_rova-userdebug \
+    droidx_rova-eng
