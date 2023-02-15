@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/voltage_rova.mk
+    $(LOCAL_DIR)/catalyst_rova.mk
 
 COMMON_LUNCH_CHOICES := \
-    voltage_rova-user \
-    voltage_rova-userdebug \
-    voltage_rova-eng
+    catalyst_rova-user \
+    catalyst_rova-userdebug \
+    catalyst_rova-eng
