@@ -115,6 +115,8 @@ persist.vendor.camera.HAL3.enabled=1
 persist.vendor.cne.feature=1
 
 # Display
+debug.sf.latch_unsignaled=1
+debug.sf.disable_backpressure=1
 debug.enable.sglscale=1
 debug.hwui.renderer=skiagl
 debug.renderengine.backend=skiaglthreaded
